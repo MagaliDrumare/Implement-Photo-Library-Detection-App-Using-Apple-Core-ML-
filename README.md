@@ -14,7 +14,8 @@ import UIKit
 import CoreML
 import Vision
 
-class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ViewController: UIViewController,UINavigationControllerDelegate, 
+UIImagePickerControllerDelegate {
     
     // create a variable imagePicker
     private var imagePicker = UIImagePickerController()
@@ -35,7 +36,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         self.imagePicker.delegate = self
     }
     // create the function to pick up the image
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, 
+    didFinishPickingMediaWithInfo info: [String : Any]) {
         //dismiss imagePickerController after the selection
         dismiss(animated: true, completion: nil)
     
@@ -45,7 +47,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         }
         // put the selected image in the photo container photoImageView
         self.photoImageView.image = pickedImage
-        // apply to the pickedImage the processImage function that apply to each image the CoreML API with GoogLeNetPlaces model
+        // apply to the pickedImage the processImage function that apply 
+        //to each image the CoreML API with GoogLeNetPlaces model
         processImage(image:pickedImage)
     }
     
@@ -59,7 +62,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
     
         // create the visionModel to feed the API and obtain visionRequest
         // VNCoreMLModel is a container fore CoreML model used with visionRequest
-        // put the model "private var model = GoogLeNetPlaces()" into the container : try? VNCoreMLModel(for:self.model.model)
+        // put the model "private var model = GoogLeNetPlaces()" 
+        //into the container : try? VNCoreMLModel(for:self.model.model)
         guard let visionModel = try? VNCoreMLModel(for:self.model.model) else {
             fatalError ("Unable to create a vision model")
         }
@@ -69,7 +73,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         let visionRequest = VNCoreMLRequest(model: visionModel) {request, error in
             if error != nil{return
             }
-            // VNClassificationObservation is the Scene classification information produced by an image analysis request.
+            // VNClassificationObservation is the Scene classification 
+            //information produced by an image analysis request.
             guard let results = request.results as? [VNClassificationObservation] else{
             return
             }
