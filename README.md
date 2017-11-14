@@ -1,7 +1,8 @@
  ![alt tag](https://github.com/MagaliDrumare/Implement-Photo-Library-Detection-App-Using-Apple-Core-ML-/blob/master/PhotoApp.gif)
 
 
-# Implement-Photo-Library-Detection-App-Using-Apple-Core-ML-
+# Implement Photo Library Detection App Using Apple Core ML
+* Mastering Core ML for iOS on Udemy by Mohammad Azam : http://bit.ly/2ADSykK
 
 ```swift 
 
