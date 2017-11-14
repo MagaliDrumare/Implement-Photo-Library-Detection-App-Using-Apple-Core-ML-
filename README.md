@@ -2,12 +2,11 @@
 
 ```swift 
 
-//
+
 //  ViewController.swift
-//  PhotoApp
-//
+
 //  Created by DRUMARE on 14/11/2017.
-//  Copyright © 2017 DRUMARE. All rights reserved.
+//  Credits © Mastering Core ML for iOS Udemy 
 //
 
 import UIKit
@@ -96,10 +95,12 @@ UIImagePickerControllerDelegate {
         
         // create a visionRequestHandler which execute the request
         // initialize the visionRequestHandler
-        // the visionRequestHandler take as parameter a ciImage (that's why we created "guard let ciImage")
+        // the visionRequestHandler take as parameter a ciImage 
+        // (that's why we created "guard let ciImage")
         // orientation of the image is up
         // no another option [:]
-        let visionRequestHandler = VNImageRequestHandler(ciImage: ciImage, orientation: .up, options: [:])
+        let visionRequestHandler = VNImageRequestHandler
+        (ciImage: ciImage, orientation: .up, options: [:])
         
         // execute the visionRequest :  try! visionRequestHandler.perform([visionRequest])
         DispatchQueue.global(qos: .userInteractive).async {
