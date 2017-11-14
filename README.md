@@ -1,3 +1,6 @@
+ ![alt tag](https://github.com/MagaliDrumare/Implement-Photo-Library-Detection-App-Using-Apple-Core-ML-/blob/master/PhotoApp.gif)
+
+
 # Implement-Photo-Library-Detection-App-Using-Apple-Core-ML-
 
 ```swift 
